@@ -8,7 +8,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/kkkaoru/static-by-nextjs/issues"
   },
-  "homepage": "https://github.com/kkkaoru/static-by-nextjs#readme"
+  "homepage": "https://github.com/kkkaoru/static-by-nextjs#readme",
+  "dependencies": {
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
