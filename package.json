@@ -8,9 +8,11 @@
   },
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all -s build dev:export dev:launch",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "dev:export": "next export",
+    "dev:launch": "browser-sync 'out' -w"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,8 @@
   "devDependencies": {
     "@types/node": "^14.6.2",
     "@types/react": "^16.9.48",
+    "browser-sync": "^2.26.12",
+    "npm-run-all": "^4.1.5",
     "typescript": "^4.0.2"
   }
 }
