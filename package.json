@@ -9,11 +9,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -s build dev:export dev:launch",
-    "dev": "next dev",
+    "dev": "npm-run-all -p watch:* next-dev",
     "build": "next build",
+    "next-dev": "next dev",
     "dev:export": "next export",
     "dev:launch": "browser-sync 'out' -w",
-    "lint:eslint": "eslint --fix pages"
+    "lint:eslint": "eslint --fix pages",
+    "watch:eslint": "chokidar '**/*.tsx' '**/*.ts' -c 'eslint --fix {path}' "
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,7 @@
     "@typescript-eslint/parser": "^4.1.0",
     "babel-plugin-styled-components": "^1.11.1",
     "browser-sync": "^2.26.12",
+    "chokidar-cli": "^2.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "npm-run-all": "^4.1.5",
