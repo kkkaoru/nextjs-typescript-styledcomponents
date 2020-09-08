@@ -60,8 +60,8 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
+    "*.{tsx,ts}": [
+      "eslint --max-warnings=0 --fix",
       "git add"
     ]
   }
