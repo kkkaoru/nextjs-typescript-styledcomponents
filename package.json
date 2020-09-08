@@ -12,7 +12,8 @@
     "dev": "next dev",
     "build": "next build",
     "dev:export": "next export",
-    "dev:launch": "browser-sync 'out' -w"
+    "dev:launch": "browser-sync 'out' -w",
+    "lint:eslint": "eslint --fix pages"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/kkkaoru/static-by-nextjs#readme",
   "dependencies": {
+    "eslint": "^7.8.1",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -33,12 +35,18 @@
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
+    "@types/eslint": "^7.2.2",
     "@types/node": "^14.6.2",
     "@types/react": "^16.9.48",
     "@types/styled-components": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
     "babel-plugin-styled-components": "^1.11.1",
     "browser-sync": "^2.26.12",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.1",
     "react-is": "^16.13.1",
     "typescript": "^4.0.2"
   }
