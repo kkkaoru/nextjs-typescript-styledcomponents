@@ -13,8 +13,11 @@
     "next-dev": "next dev",
     "dev:export": "next export",
     "dev:launch": "browser-sync 'out' -w",
+    "lint": "npm-run-all -p lint:*",
     "lint:eslint": "eslint --fix pages",
-    "watch:eslint": "chokidar '**/*.tsx' '**/*.ts' -c 'eslint --fix {path}' "
+    "lint:stylelint": "stylelint --fix {pages,styles}",
+    "watch:eslint": "chokidar '**/*.tsx' '**/*.ts' -c 'eslint --fix {path}' ",
+    "watch:stylelint": "chokidar '**/*.tsx' '**/*.css' -c 'stylelint --fix {path}' "
   },
   "repository": {
     "type": "git",
@@ -70,6 +73,10 @@
   },
   "lint-staged": {
     "*.{tsx,ts}": [
+      "eslint --max-warnings=0 --fix",
+      "git add"
+    ],
+    "*.{tsx,css}": [
       "eslint --max-warnings=0 --fix",
       "git add"
     ]
