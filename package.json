@@ -20,7 +20,7 @@
   },
   "keywords": [],
   "author": "https://github.com/kkkaoru",
-  "license": "./LICENSE",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kkkaoru/static-by-nextjs/issues"
   },
