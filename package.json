@@ -77,7 +77,7 @@
       "git add"
     ],
     "*.{tsx,css}": [
-      "eslint --max-warnings=0 --fix",
+      "stylelint --max-warnings=0 --fix",
       "git add"
     ]
   }
