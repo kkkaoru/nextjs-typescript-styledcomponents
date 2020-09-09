@@ -1,9 +1,16 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { md, xs } from '@/utils/media-queries';
 
 const Title = styled.h1`
   color: #333;
   font-size: 2.4rem;
+  @media ${xs} {
+    color: red;
+  }
+  @media ${md} {
+    font-size: 3.2rem;
+  }
 `;
 
 export default function Home(): JSX.Element {
