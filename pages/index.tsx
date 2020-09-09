@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import styled from 'styled-components';
+import { DefaultLayout } from '@/components/layouts/default';
 import { md, xs } from '@/utils/media-queries';
 
 const Title = styled.h1`
@@ -15,14 +15,10 @@ const Title = styled.h1`
 
 export default function Home(): JSX.Element {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <DefaultLayout>
       <main>
         <Title>HELLO WORLD!</Title>
       </main>
-    </div>
+    </DefaultLayout>
   );
 }

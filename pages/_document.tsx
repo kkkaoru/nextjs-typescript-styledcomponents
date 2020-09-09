@@ -32,11 +32,7 @@ export default class MyDocument extends Document<Props> {
   render(): JSX.Element {
     return (
       <Html lang="ja">
-        <Head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {this.props.styleTags}
-        </Head>
+        <Head>{this.props.styleTags}</Head>
         <body>
           <Main />
           <NextScript />
