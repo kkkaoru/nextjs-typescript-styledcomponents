@@ -1,9 +1,0 @@
-{
-  "plugins": [
-    {
-      "removeAttrs": {
-        "attrs": "data.*"
-      }
-    }
-  ]
-}
