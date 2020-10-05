@@ -17,7 +17,8 @@
     "lint:eslint": "eslint --fix pages",
     "lint:stylelint": "stylelint --fix {pages,styles}",
     "watch:eslint": "chokidar '**/*.tsx' '**/*.ts' -c 'eslint --fix {path}' ",
-    "watch:stylelint": "chokidar '**/*.tsx' '**/*.css' -c 'stylelint --fix {path}' "
+    "watch:stylelint": "chokidar '**/*.tsx' '**/*.css' -c 'stylelint --fix {path}' ",
+    "minify:svg": "svgo -f public/ -o public/ --config .svgo.json"
   },
   "repository": {
     "type": "git",
@@ -67,6 +68,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
+    "svgo": "^1.3.2",
     "typescript": "^4.0.2"
   },
   "husky": {
