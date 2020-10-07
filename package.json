@@ -17,7 +17,8 @@
     "lint:eslint": "eslint --fix pages",
     "lint:stylelint": "stylelint --fix {pages,styles}",
     "watch:eslint": "chokidar '**/*.tsx' '**/*.ts' -c 'eslint --fix {path}' ",
-    "watch:stylelint": "chokidar '**/*.tsx' '**/*.css' -c 'stylelint --fix {path}' "
+    "watch:stylelint": "chokidar '**/*.tsx' '**/*.css' -c 'stylelint --fix {path}' ",
+    "minify:svg": "svgo -f public/ -o public/ --config .svgo.yml"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "@types/eslint": "^7.2.2",
     "@types/node": "^14.6.2",
     "@types/react": "^16.9.48",
@@ -47,6 +49,8 @@
     "@types/vfile-message": "2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.11.1",
     "browser-sync": "^2.26.12",
     "chokidar-cli": "^2.1.0",
@@ -64,6 +68,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
+    "svgo": "^1.3.2",
     "typescript": "^4.0.2"
   },
   "husky": {
