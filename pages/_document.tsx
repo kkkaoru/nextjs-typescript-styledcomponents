@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document';
+import Document, { DocumentInitialProps, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import * as React from 'react';
 
@@ -28,16 +28,5 @@ export default class MyDocument extends Document<Props> {
     } finally {
       sheet.seal();
     }
-  }
-  render(): JSX.Element {
-    return (
-      <Html lang="ja">
-        <Head>{this.props.styleTags}</Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
   }
 }
