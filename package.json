@@ -77,12 +77,19 @@
     }
   },
   "lint-staged": {
-    "*.{tsx,ts}": [
+    "*.tsx": [
       "eslint --max-warnings=0 --fix",
+      "stylelint --max-warnings=0 --fix",
+      "prettier -cw",
       "git add"
     ],
-    "*.{tsx,css}": [
-      "stylelint --max-warnings=0 --fix",
+    "*.ts": [
+      "eslint --max-warnings=0 --fix",
+      "prettier -cw",
+      "git add"
+    ],
+    "*.js": [
+      "prettier -cw",
       "git add"
     ]
   }
