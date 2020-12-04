@@ -16,6 +16,7 @@
     "lint": "npm-run-all -p lint:*",
     "lint:eslint": "eslint --fix pages",
     "lint:stylelint": "stylelint --fix {pages,styles}",
+    "prettier": "prettier --write *.js **/*.{js,ts,tsx}",
     "watch:eslint": "chokidar '**/*.tsx' '**/*.ts' -c 'eslint --fix {path}' ",
     "watch:stylelint": "chokidar '**/*.tsx' '**/*.css' -c 'stylelint --fix {path}' ",
     "minify:svg": "svgo -f public/ -o public/ --config .svgo.yml"
