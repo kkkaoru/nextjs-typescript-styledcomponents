@@ -76,32 +76,5 @@
     "stylelint-order": "^4.1.0",
     "svgo": "^1.3.2",
     "typescript": "^4.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.tsx": [
-      "eslint --max-warnings=0 --fix",
-      "stylelint --max-warnings=0 --fix",
-      "prettier -cw",
-      "git add"
-    ],
-    "*.ts": [
-      "eslint --max-warnings=0 --fix",
-      "prettier -cw",
-      "git add"
-    ],
-    "*.js": [
-      "prettier -cw",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint --max-warnings=0 --fix",
-      "prettier -cw",
-      "git add"
-    ]
   }
 }
