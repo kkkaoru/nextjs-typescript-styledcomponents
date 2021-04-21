@@ -11,5 +11,8 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'max-lines': 'error',
+    'max-depth': 'error',
+    'max-lines-per-function': 'error',
   },
 };
