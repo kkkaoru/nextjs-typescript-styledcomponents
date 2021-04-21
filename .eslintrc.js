@@ -10,6 +10,7 @@ module.exports = {
     es6: true,
   },
   rules: {
+    'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
     'max-lines': 'error',
     'max-depth': 'error',

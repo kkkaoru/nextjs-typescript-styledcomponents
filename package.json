@@ -11,6 +11,7 @@
     "dev": "npm-run-all -p watch:* next-dev",
     "build": "next build",
     "next-dev": "next dev",
+    "test": "npm run tsc",
     "dev:export": "next export",
     "dev:launch": "browser-sync 'out' -w",
     "lint": "npm-run-all -p lint:*",
@@ -20,6 +21,7 @@
     "watch:ts-tsx": "chokidar '**/*.{ts,tsx}' -c 'eslint --fix {path} && stylelint --fix {path} && prettier --write {path}' ",
     "watch:css": "chokidar '**/*.css' -c 'stylelint --fix {path} && prettier --write {path}' ",
     "minify:svg": "svgo -f public/ -o public/ --config .svgo.yml",
+    "tsc": "tsc --noEmit",
     "prepare": "husky install"
   },
   "repository": {
