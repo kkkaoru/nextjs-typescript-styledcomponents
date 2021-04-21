@@ -15,10 +15,9 @@
     "dev:launch": "browser-sync 'out' -w",
     "lint": "npm-run-all -p lint:*",
     "lint:eslint": "eslint --fix pages",
-    "lint:stylelint": "stylelint --fix {pages,styles}",
+    "lint:stylelint": "stylelint --fix {pages,styles,components}",
     "prettier": "prettier --write *.js **/*.{js,ts,tsx}",
-    "watch:ts": "chokidar '**/*.ts' -c 'eslint --fix {path} && prettier --write {path}' ",
-    "watch:tsx": "chokidar '**/*.tsx' -c 'eslint --fix {path} && stylelint --fix {path} && prettier --write {path}' ",
+    "watch:ts-tsx": "chokidar '**/*.{ts,tsx}' -c 'eslint --fix {path} && stylelint --fix {path} && prettier --write {path}' ",
     "watch:css": "chokidar '**/*.css' -c 'stylelint --fix {path} && prettier --write {path}' ",
     "minify:svg": "svgo -f public/ -o public/ --config .svgo.yml",
     "prepare": "husky install"

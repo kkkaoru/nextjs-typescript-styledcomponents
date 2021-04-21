@@ -1,6 +1,6 @@
 /** @type import('eslint').Linter.BaseConfig */
 module.exports = {
-  extends: ['airbnb-typescript', 'prettier', 'prettier/@typescript-eslint', 'prettier/react'],
+  extends: ['airbnb-typescript', 'prettier'],
   parserOptions: {
     project: './tsconfig.json',
   },
