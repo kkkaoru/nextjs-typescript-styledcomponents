@@ -1,0 +1,23 @@
+name: Run static analyzes
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  lint:
+    name: Run static analyzes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14.15.1'
+      - name: Install yarn
+        run: npm install -g yarn@1.22.5
+      - name: Run yarn install
+        run: yarn install
+      - name: Run lints
+        run: yarn lint
+      - name: Run tsc
+        run: yarn tsc --noEmit
