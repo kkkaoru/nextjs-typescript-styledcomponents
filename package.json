@@ -15,7 +15,7 @@
     "dev:export": "next export",
     "dev:launch": "browser-sync 'out' -w",
     "lint": "npm-run-all -p lint:* prettier",
-    "lint:eslint": "eslint --max-warnings=0 --fix {pages,components,utils}",
+    "lint:eslint": "eslint --max-warnings=0 --fix **/*.{tsx,ts}",
     "lint:stylelint": "stylelint --max-warnings=0 --fix **/*.{tsx,ts,css}",
     "prettier": "prettier -cw *.js **/*.{js,ts,tsx}",
     "watch:ts-tsx": "chokidar '**/*.{ts,tsx}' -c 'eslint --fix {path} && stylelint --fix {path} && prettier --write {path}' ",
