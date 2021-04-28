@@ -11,7 +11,9 @@ module.exports = {
   },
   rules: {
     'import/prefer-default-export': 'off',
+    'import/extensions': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
     'max-lines': 'error',
     'max-depth': 'error',
     'max-lines-per-function': 'error',
