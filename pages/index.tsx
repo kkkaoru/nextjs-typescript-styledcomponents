@@ -1,18 +1,7 @@
 import styled from 'styled-components';
 import { DefaultLayout } from '@/components/layouts/default';
-import { md, xs } from '@/utils/media-queries';
 import TwitterSvg from '@/public/twitter.svg';
-
-const Title = styled.h1`
-  color: #333;
-  font-size: 2.4rem;
-  @media ${xs} {
-    color: red;
-  }
-  @media ${md} {
-    font-size: 3.2rem;
-  }
-`;
+import { Title } from '@/components/atoms/title';
 
 const TwitterIcon = styled(TwitterSvg)`
   width: 3.2rem;
@@ -29,7 +18,7 @@ export default function Home(): JSX.Element {
     <DefaultLayout>
       <Main>
         <TwitterIcon />
-        <Title>HELLO WORLD!</Title>
+        <Title text="HELLO WORLD!" />
       </Main>
     </DefaultLayout>
   );
